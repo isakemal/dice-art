@@ -116,8 +116,15 @@ function startProcess() {
   
 
   var downloadData = document.querySelector(".download")
-  downloadData.download = "dice-data.json"; 
-  downloadData.href = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(downloadArr));
+
+  s='';
+  for (let key in downloadArr) {
+     s+= downloadArr[key].map(item => item.slice(-1)).join('\t') + '\n';
+  }
+  downloadData.href = "data:text/text;charset=utf-8," + encodeURIComponent(s);
+  downloadData.download = "dice-data.txt";
+//  downloadData.download = "dice-data.json";
+//  downloadData.href = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(downloadArr));
   downloadData.innerHTML = "Download Dice Data";
 }
 
