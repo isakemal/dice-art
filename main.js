@@ -97,8 +97,8 @@ function startProcess() {
   diceData.forEach((line, y) => {
     line.forEach((dice, x) => {
       let d = document.createElement("img")
-      d.style.width = `calc(50vw / ${HORIZONTAL_DICE_COUNT})` 
-      d.style.height = `calc(50vw / ${HORIZONTAL_DICE_COUNT})` 
+      d.style.width = `calc(100vw / ${HORIZONTAL_DICE_COUNT})`
+      d.style.height = `calc(100vw / ${HORIZONTAL_DICE_COUNT})`
 
       d.src = `./dice/${dice}.png`
       downloadArr[y + 1] ? downloadArr[y + 1].push(x + 1 + ": " + dice) : downloadArr[y + 1] = [x + 1 + ": " + dice]
