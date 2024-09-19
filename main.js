@@ -20,7 +20,11 @@ function openModal(url){
   img.src = url
 
   img.onload = function(){
-    
+    let option = document.createElement("option")
+    option.value = 40
+    option.innerHTML = 40
+    options.appendChild(option)
+
     let possibilities = commDivs(img.width, img.height).map(i=>img.width/i).sort((a,b)=>a-b)
     possibilities.forEach(item=>{
       let option = document.createElement("option")
@@ -28,7 +32,7 @@ function openModal(url){
       option.innerHTML = item
       options.appendChild(option)
     })
-    
+
 
   }
   
@@ -60,7 +64,10 @@ function startProcess() {
   
   
   ctx.drawImage(img, 0, 0, img.width, img.height);
-  let imgData = ctx.getImageData(0, 0, img.width, img.height);
+  w = parseInt(img.width/40)*40
+  h = parseInt(img.height/40)*40
+  //let imgData = ctx.getImageData(0, 0, img.width, img.height);
+  let imgData = ctx.getImageData(0, 0, w, h);
   pixels = imgData.data;
   
   for (var i = 0; i < pixels.length; i += 4 ) {
