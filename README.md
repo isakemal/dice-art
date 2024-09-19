@@ -4,7 +4,7 @@ This script will allow you to convert your images to a dice art.
 
 Choose your image from your PC then select a "Horizontal Dice Count" from the list and click "Calculate"
 
-[Live Demo](https://ilyasbilgihan.github.io/Image2Dice/)
+[Live Demo](https://isakemal.github.io/dice-art/)
 
 <br>
 
@@ -66,9 +66,6 @@ After the calculation is complete, you can download a JSON file that shows which
 
 <br>
 
-## Reach me
-**[twitter/@ilyasbilgihan](https://twitter.com/ilyasbilgihan)**
+## Thanks to
 
-**[instagram/@ilyasbilgihan](https://instagram.com/ilyasbilgihan)**
-
-**ilyasbilgihan@gmail.com**
+**Ilyas Bilgihan**
