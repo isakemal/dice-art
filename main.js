@@ -20,10 +20,12 @@ function openModal(url){
   img.src = url
 
   img.onload = function(){
-    let option = document.createElement("option")
-    option.value = 40
-    option.innerHTML = 40
-    options.appendChild(option)
+    [20,25,30,40,50].forEach(item=>{
+      let option = document.createElement("option")
+      option.value = item
+      option.innerHTML = item
+      options.appendChild(option)
+    })
 
     let possibilities = commDivs(img.width, img.height).map(i=>img.width/i).sort((a,b)=>a-b)
     possibilities.forEach(item=>{
@@ -64,8 +66,8 @@ function startProcess() {
   
   
   ctx.drawImage(img, 0, 0, img.width, img.height);
-  w = parseInt(img.width/40)*40
-  h = parseInt(img.height/40)*40
+  w = parseInt(img.width/HORIZONTAL_DICE_COUNT)*HORIZONTAL_DICE_COUNT
+  h = parseInt(img.height/HORIZONTAL_DICE_COUNT)*HORIZONTAL_DICE_COUNT
   //let imgData = ctx.getImageData(0, 0, img.width, img.height);
   let imgData = ctx.getImageData(0, 0, w, h);
   pixels = imgData.data;
