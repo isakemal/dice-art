@@ -20,7 +20,7 @@ function openModal(url){
   img.src = url
 
   img.onload = function(){
-    [20,25,30,40,50].forEach(item=>{
+    [20,25,30,31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49,50,51,52,53,54,55,56,57,58,59,60].forEach(item=>{
       let option = document.createElement("option")
       option.value = item
       option.innerHTML = item
