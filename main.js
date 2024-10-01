@@ -108,7 +108,15 @@ function startProcess() {
       let d = document.createElement("img")
       d.style.width = `calc(100vw / ${HORIZONTAL_DICE_COUNT})`
       d.style.height = `calc(100vw / ${HORIZONTAL_DICE_COUNT})`
-
+      if ((x + y) % 2 == 1) d.style.filter = "brightness(2) contrast(0.5)"
+      // when clicked on this dice, it will highlight the dice
+      d.addEventListener('click', function() {
+        // Remove highlight from all dice
+        document.querySelectorAll('#result img').forEach(img => img.classList.remove('highlighted'));
+        // Add highlight to this dice
+        this.classList.add('highlighted');
+      });
+      
       d.src = `./dice/${dice}.png`
       downloadArr[y + 1] ? downloadArr[y + 1].push(x + 1 + ": " + dice) : downloadArr[y + 1] = [x + 1 + ": " + dice]
       res.append(d)

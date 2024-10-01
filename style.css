@@ -12,6 +12,15 @@
   display: block;
 }
 
+#result img.highlighted {
+  border: 2px solid #ff0000; /* Red border */
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.5); /* Red glow effect */
+  transform: scale(1.1); /* Slightly enlarge the image */
+  z-index: 1; /* Bring the highlighted dice to the front */
+  transition: all 0.3s ease; /* Smooth transition for the effects */
+  filter: brightness(1) contrast(1);
+}
+
 .prev {
   display: grid;
   //grid-template-columns: 1fr 1fr 2fr;
