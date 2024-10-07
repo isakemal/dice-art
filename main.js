@@ -108,7 +108,8 @@ function startProcess() {
       let d = document.createElement("img")
       d.style.width = `calc(100vw / ${HORIZONTAL_DICE_COUNT})`
       d.style.height = `calc(100vw / ${HORIZONTAL_DICE_COUNT})`
-      if ((x + y) % 2 == 1) d.style.filter = "brightness(2) contrast(0.5)"
+      // Chess board pattern
+      //if ((x + y) % 2 == 1) d.style.filter = "brightness(2) contrast(0.5)"
       // when clicked on this dice, it will highlight the dice
       d.addEventListener('click', function() {
         // Remove highlight from all dice
